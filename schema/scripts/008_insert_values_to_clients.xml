@@ -1,0 +1,14 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="4" author="terentem">
+        <loadData tableName="clients" file="../data/clients.csv" relativeToChangelogFile="true">
+            <column name="name" type="STRING"/>
+            <column name="phone" type="VARCHAR"/>
+            <column name="address" type="STRING"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+<include file="scripts/001_create_species_type.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/002_insert_values_to_species_types.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/003_create_clinics.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/004_insert_values_to_clinics.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/005_create_animals.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/006_insert_values_to_animals.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/007_create_clients.xml"
+    relativeToChangelogFile="true"/>
+    <include file="scripts/008_insert_values_to_clients.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/009_create_animals_clients.xml"
+             relativeToChangelogFile="true"/>
+    <include file="scripts/010_insert_values_to_animal_clients.xml"
+             relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

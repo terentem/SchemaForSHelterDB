@@ -1,0 +1,35 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="9" author="terentem">
+        <createTable tableName="animals_clients">
+
+            <column name="animal_id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_animals_clients"/>
+            </column>
+
+            <column name="client_id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_animals_clients"/>
+            </column>
+
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="animals_clients"
+                                 baseColumnNames="animal_id"
+                                 constraintName="fk_animal_clients_animal"
+                                 referencedTableName="animals"
+                                 referencedColumnNames="id"
+                                 onDelete="RESTRICT"/>
+
+        <addForeignKeyConstraint baseTableName="animals_clients"
+                                 baseColumnNames="client_id"
+                                 constraintName="fk_animal_clients_clients"
+                                 referencedTableName="clients"
+                                 referencedColumnNames="id"
+                                 onDelete="RESTRICT"/>
+    </changeSet>
+
+</databaseChangeLog>

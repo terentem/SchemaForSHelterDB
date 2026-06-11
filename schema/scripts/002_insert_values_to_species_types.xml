@@ -1,0 +1,22 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="2" author="terentem">
+        <insert tableName="species_types">
+            <column name="species_name" value="cat"/>
+        </insert>
+        <insert tableName="species_types">
+            <column name="species_name" value="dog"/>
+        </insert>
+        <insert tableName="species_types">
+            <column name="species_name" value="bird"/>
+        </insert>
+        <insert tableName="species_types">
+            <column name="species_name" value="fish"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

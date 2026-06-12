@@ -1,1 +1,1 @@
-docker run --rm -v ${PWD}/schema:/liquibase/changelog liquibase/liquibase --url=jdbc:postgresql://host.docker.internal:5433/mini_shelter --username=postgres --password=terentem --changeLogFile=log.xml --classpath=/liquibase/changelog/postgresql-42.7.10.jar --secure-parsing=false  update
+docker run --rm -v ${PWD}/schema:/liquibase/changelog liquibase/liquibase --url=jdbc:postgresql://host.docker.internal:5433/mini_shelter --username=postgres --password=x --changeLogFile=log.xml --classpath=/liquibase/changelog/postgresql-42.7.10.jar --secure-parsing=false  update
